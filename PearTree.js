@@ -1,5 +1,5 @@
-const FruitTree = require('./parent_tree.js')
-const Pear = require('./apple_fruit.js')
+const FruitTree = require('./FruitTree.js')
+const Pear = require('./Apple.js')
 
 
 

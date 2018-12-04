@@ -1,4 +1,4 @@
-const Fruit = require('./parent_fruit.js')
+const Fruit = require('./Fruit.js')
 
 class Pear extends Fruit{
   

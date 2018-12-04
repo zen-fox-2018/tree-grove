@@ -1,4 +1,4 @@
-const Fruit = require('./parent_fruit')
+const Fruit = require('./Fruit')
 
 class Apple extends Fruit {
 

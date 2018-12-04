@@ -1,6 +1,6 @@
-const MangoTree = require('./mango_tree.js');
-const AppleTree = require('./apple_tree.js');
-const PearTree = require('./pear_tree.js');
+const MangoTree = require('./MangoTree.js');
+const AppleTree = require('./AppleTree.js');
+const PearTree = require('./PearTree.js');
 
 
 class TreeGrove {
@@ -23,10 +23,10 @@ class TreeGrove {
     }
     nextYear() {
         for(let i =0 ; i < this._pohonDiGrove.length;i++){
-            if(this._pohonDiGrove[i]._healthStatus != false){
-            this._pohonDiGrove[i].grow()
-            this._pohonDiGrove[i].produceFruits()
-            this._pohonDiGrove[i].harvest()
+            if (this._pohonDiGrove[i]._healthStatus != false) {
+                this._pohonDiGrove[i].grow()
+                this._pohonDiGrove[i].produceFruits()
+                this._pohonDiGrove[i].harvest()
             }
         }
     }
@@ -39,7 +39,7 @@ class TreeGrove {
     showTrees () {
         console.log('--------------Nama Pohon-----------')
         for(let i = 0;i <this._pohonDiGrove.length; i++){
-            console.log(`Pohon ${i + 1} dengan nama ${this._pohonDiGrove[i].name} `)
+            console.log(`Pohon ${i + 1} dengan nama ${this._pohonDiGrove[i].constructor.name} `)
         }
     }
     showMatureTrees () {
