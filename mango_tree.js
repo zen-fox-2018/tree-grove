@@ -4,12 +4,7 @@ class MangoTree extends FruitTree {
 
   // Initialize a new MangoTree
   constructor (ageTree, heightTree, matureAgeTree, stopGrow, deadAgeTree) {
-    super();
-    this._age = ageTree;
-    this._height = heightTree;
-    this._stopGrow = stopGrow;
-    this._matureAge = matureAgeTree;
-    this._deadAge = 17;
+    super(ageTree, heightTree, matureAgeTree, stopGrow, 17)
   }
 }
 

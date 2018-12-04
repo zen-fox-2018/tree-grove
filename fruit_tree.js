@@ -55,9 +55,23 @@ class FruitTree {
       var fruitsPerProduce = Math.floor((Math.random() * 10)+1);
       // console.log(fruitsPerProduce);
       for (var i = 0; i < fruitsPerProduce; i++) {
-        let fruit = new Fruit();
+        if (this.constructor.name === 'MangoTree') {
+          let mango = new Mango();
+          this._fruits.push(mango);
+        }
+        else if (this.constructor.name === 'AppleTree') {
+          let Apple = new Apple();
+          this._fruits.push(apple);
+        }
+        else if (this.constructor.name === 'PearTree') {
+          let pear = new Pear();
+          this._fruits.push(pear);
+        }
+        else{
+          let fruit = new Fruit();
+          this._fruits.push(fruit);
+        }
         // console.log(mangoFruit);
-        this._fruits.push(fruit);
       }
     }
     // console.log(this._fruits);
