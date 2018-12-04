@@ -1,8 +1,59 @@
-const MangoTree = require('./mango_tree.js');
-const AppleTree = require('./apple_tree.js');
-const PearTree = require('./pear_tree.js');
+const MangoTree = require('./MangoTree');
+const AppleTree = require('./AppleTree');
+const PearTree = require('./PearTree');
 
-class TreeGrove {}
+class TreeGrove {
+  constructor() {
+    this._trees = []
+  }
+
+  inputTree(name , age , height , mature , health){
+    if (name == 'MangoTree') {
+      this._trees.push(new MangoTree(age, height , mature , health))
+    } else if (name == 'AppleTree') {
+      this._trees.push(new AppleTree(age, height , mature , health))
+    } else if (name == 'PearTree') {
+      this._trees.push(new PearTree(age, height , mature , health))
+    }
+  }
+
+  showAges() {
+    this._trees.forEach(x => {
+      console.log(`${x.name} age is : ${x.age}`)
+    })
+  }
+
+  nextYear() {
+    this._trees.forEach(tree => {
+      tree.age +=1
+    })
+  }
+
+  showTrees() {
+    this._trees.forEach(tree => {
+      console.log(`~ ${tree.name}`)
+    })
+  }
+
+  showMatureTrees() {
+    console.log(`Mature tree : `)
+    this._trees.forEach(tree => {
+      if (tree.age == tree._mature) {
+        console.log(`~ ${tree.name} \n`)
+      }
+    })
+  }
+
+  showDeadTrees() {
+    console.log(`Dead tree: `)
+
+    this._trees.forEach(tree => {
+      if (tree.age == tree._died) {
+        console.log(`~ ${tree.name}\n`)
+      }
+    })
+  }
+}
 
 var grove = new TreeGrove()
 // input your trees data !
@@ -16,17 +67,18 @@ grove.inputTree("MangoTree", 5, 2.4, 12 ,true)
 grove.inputTree("AppleTree", 4, 1.2, 5, true)
 grove.inputTree("PearTree", 7, 2, 15, true)
 
+// console.log(grove._trees)
 // next year
 grove.nextYear()
 
 // show trees ages
 grove.showAges()
-
-// show trees
+console.log('==========================')
+// // show trees
 grove.showTrees()
-
-// show trees
+console.log('==========================')
+// // show trees
 grove.showMatureTrees()
-
-// show trees
+console.log('==========================')
+// // show trees
 grove.showDeadTrees()
