@@ -9,6 +9,7 @@ class FruitTree {
     this._harvested = []
     this._healthStatus = healthStatus
     this._matureAge = matureAge
+    this._maxAge = 20
   }
 
   get age () {
@@ -53,7 +54,11 @@ class FruitTree {
   // Get current states here
   // Grow the tree
   grow () {
-    this.age = 1
+    if (this.age < this._maxAge) {
+      this.age = 1
+    } else {
+      this.healthStatus = false
+    }
     this.height = Math.random()
   }
 

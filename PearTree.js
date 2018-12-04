@@ -5,6 +5,7 @@ const Pear = require('./Pear')
 class PearTree extends FruitTree {
   constructor(age, height, matureAge, healthStatus) {
     super(age, height, matureAge, healthStatus)
+    this._maxAge = 10
   }
 
   produceFruits () {

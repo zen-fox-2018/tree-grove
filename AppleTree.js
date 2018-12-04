@@ -5,6 +5,7 @@ const Apple = require('./Apple')
 class AppleTree extends FruitTree {
   constructor(age, height, matureAge, healthStatus) {
     super(age, height, matureAge, healthStatus)
+    this._maxAge = 15
   }
 
   produceFruits () {

@@ -4,11 +4,6 @@ const PearTree = require('./PearTree');
 
 class TreeGrove {
     constructor() {
-        // this.name = name
-        // this.year = year
-        // this.height = height
-        // this.matureAge = matureAge
-        // this.healthStatus = healthStatus
         this.trees = []
     }
 
@@ -37,6 +32,7 @@ class TreeGrove {
                 result.push(`${tree.constructor.name} age: ${tree.age}`)
             }
         })
+        console.log("ages:")
         console.log(result);
     }
 
@@ -47,6 +43,7 @@ class TreeGrove {
                 result.push(tree.constructor.name)
             }
         });
+        console.log("trees:");
         console.log(result);
     }
 
@@ -66,6 +63,7 @@ class TreeGrove {
                 result.push(tree.constructor.name)
             }
         });
+        console.log("dead trees:")
         console.log(result);
     }
 
@@ -79,7 +77,7 @@ var grove = new TreeGrove()
 // parameter ke-4: umur mature pohon tersebut
 // parameter ke-5: healthStatus dari pohon tersebut ketika ditanam
 grove.inputTree("MangoTree", 3, 1.8, 7, true)
-grove.inputTree("MangoTree", 5, 2.4, 12 ,false)
+grove.inputTree("MangoTree", 5, 2.4, 12, true)
 grove.inputTree("AppleTree", 4, 1.2, 5, true)
 grove.inputTree("PearTree", 7, 2, 15, true)
 
