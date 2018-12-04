@@ -1,8 +1,64 @@
 const MangoTree = require('./mango_tree.js');
 const AppleTree = require('./apple_tree.js');
 const PearTree = require('./pear_tree.js');
+const FruitTree = require('./fruit_tree.js');
 
-class TreeGrove {}
+class TreeGrove {
+    constructor(){
+        this.listOfTrees = []
+    }
+
+    inputTree(name, age, height, matureAge, healthStatus){
+        if(name == 'MangoTree'){
+            this.listOfTrees.push(new MangoTree(name, age, height, matureAge, healthStatus))
+        }
+        else if (name == 'AppleTree'){
+            this.listOfTrees.push(new AppleTree(name, age, height, matureAge, healthStatus))
+        }
+        else if (name  == 'PearTree'){
+            this.listOfTrees.push(new PearTree(name, age, height, matureAge, healthStatus))
+        }
+    }
+
+    nextYear(){
+        for( let i = 0; i< this.listOfTrees.length; i++){
+            this.listOfTrees[i].grow()
+        }
+    }
+
+    showAges(){
+        console.log("\n" + 'tree ages:')
+
+        for( let i = 0; i< this.listOfTrees.length; i++){
+            console.log(this.listOfTrees[i]._age)
+        }
+    }
+
+    showTrees(){
+        console.log("\n" + 'list of trees')
+        for( let i = 0; i< this.listOfTrees.length; i++){
+            console.log(this.listOfTrees[i]._name)
+        }
+    }
+
+    showMatureTrees(){
+        console.log("\n" + 'mature trees:')
+        for( let i = 0; i< this.listOfTrees.length; i++){
+            if(this.listOfTrees[i]._age >= this.listOfTrees[i]._matureAge){
+                console.log(this.listOfTrees[i]._name)
+            }
+        }
+    }
+
+    showDeadTrees(){
+        console.log("\n" + 'dead trees:')
+        for( let i = 0; i< this.listOfTrees.length; i++){
+            if(this.listOfTrees[i]._age >= this.listOfTrees[i]._deathAge){
+                console.log(this.listOfTrees[i]._name)
+            }
+        }
+    }
+}
 
 var grove = new TreeGrove()
 // input your trees data !
@@ -22,11 +78,15 @@ grove.nextYear()
 // show trees ages
 grove.showAges()
 
-// show trees
+// // show trees
 grove.showTrees()
 
-// show trees
+// // show trees
 grove.showMatureTrees()
 
-// show trees
+// // show trees
 grove.showDeadTrees()
+
+
+
+module.exports = TreeGrove
