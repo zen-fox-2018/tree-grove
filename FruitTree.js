@@ -7,6 +7,17 @@ class FruitTree {
     this.healthStatus = treeHealthStatus
     this.deadAge = 10
   }
+
+  grow () {
+    this.age++
+    if (this.age >= this.deadAge) {
+      this.healthStatus = false
+    }
+    if (this.age <= this.matureAge ) {
+      this.height = Math.random()*2
+    }
+
+  }
 }
 
 module.exports = FruitTree

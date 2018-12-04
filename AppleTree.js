@@ -1,4 +1,4 @@
-const FruitTree = require('./fruit_tree.js')
+const FruitTree = require('./FruitTree.js')
 
 class AppleTree extends FruitTree {
   constructor(treeAge, treeHeight, treeMatureAge, treeHealthStatus) {
