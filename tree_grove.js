@@ -25,7 +25,7 @@ class TreeGrove {
 
   nextYear() {
     this._trees.forEach(tree => {
-      tree.age +=1
+      tree.grow()
     })
   }
 
@@ -66,11 +66,11 @@ grove.inputTree("MangoTree", 3, 1.8, 7, true)
 grove.inputTree("MangoTree", 5, 2.4, 12 ,true)
 grove.inputTree("AppleTree", 4, 1.2, 5, true)
 grove.inputTree("PearTree", 7, 2, 15, true)
+console.log(grove._trees)
 
-// console.log(grove._trees)
 // next year
 grove.nextYear()
-
+console.log(grove._trees)
 // show trees ages
 grove.showAges()
 console.log('==========================')
