@@ -79,6 +79,21 @@ grove.inputTree("AppleTree", 4, 1.2, 5, true)
 grove.inputTree("PearTree", 7, 2, 15, true)
 // next year
 grove.nextYear()
+grove.nextYear()
+grove.nextYear()
+grove.nextYear()
+grove.nextYear()
+grove.nextYear()
+grove.nextYear()
+grove.nextYear()
+grove.nextYear()
+grove.nextYear()
+grove.nextYear()
+grove.nextYear()
+grove.nextYear()
+grove.nextYear()
+grove.nextYear()
+grove.nextYear()
 // console.log(grove.tree);
 //
 // // show trees ages
